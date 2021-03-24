@@ -1,0 +1,323 @@
+/* @font-face{
+    font-family: heads;
+    src: url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+} */
+/* BACKGROUND */
+.sweet{
+    height: 500px;
+    width: 500px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.3;
+    margin: auto;
+    /* marging auto sets the element to the middle of the page */
+   
+}
+
+.mid{
+    position: absolute;
+    height: 250px;
+    width: 150px;
+    background-color: black;
+    border-radius: 180px;
+    margin: 175px;
+    margin-top: 125px;
+    animation: mid 5s cubic-bezier(0.5, 0, 1, 0.5) 0s infinite alternate;
+}
+ /* mid is the oval thingy in the middle changes color from 
+    */
+
+.move{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: none;
+    border-radius: 50px;
+    transform: translate(400px,200px);
+    transition: all 1s cubic-bezier(1, 0, 0, 1);
+    background-color: crimson;
+    animation: move 5s cubic-bezier(0.5, 0, 1, 0.5) 0s infinite alternate;
+   
+}/* move is the moving circle in the middle */
+
+@keyframes move{
+    0%{transform: translate(400px,200px);}
+    25%{transform: translate(200px,200px); background-color: yellow;}
+    50%{transform: translate(0px,200px); background-color: crimson;}
+    75%{transform: translate(200px,200px); background-color: cornflowerblue;}
+    100%{transform: translate(400px,200px);}
+}
+
+
+
+@keyframes mid{
+    0%{background-color: black;}
+    25%{background-color: yellow;}
+    50%{background-color: darkolivegreen;}
+    75%{background-color: cornflowerblue;}
+    100%{background-color: black;}
+}
+
+/*html{
+    background-color: grey;
+    /* animation: back 5s cubic-bezier(0.5, 0, 1, 0.5) 0s infinite alternate; */   
+
+
+/* @keyframes back{
+    0%{background-color: teal;}
+    25%{background-color: darkolivegreen;}
+    50%{background-color: teal;}
+    75%{background-color: darkolivegreen;}
+    100%{background-color: teal;}
+} */
+
+/* BACKGROUND */
+
+
+
+body{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,1fr);
+    grid-template-rows: auto auto 150px;
+    /* border: 2px solid teal; */
+    font-family: cursive,Arial, Helvetica, sans-serif;
+    
+}
+
+/* @media screen and (max-width: 500px){
+        .main{
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+        .edit{
+            grid-row-start: 3;
+            grid-row-end: 4;
+            grid-column-start: 3;
+            grid-column-end: 4;
+        }
+        .opt{
+            grid-row-start: 3;
+            grid-row-end: 4;
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+        .foot{
+            grid-row-start: 3;
+            grid-row-end: 4;
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+} */
+.top{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border: 2px solid teal;
+    border-radius: 8px;
+    background-color: none;
+    padding: 10px;
+}
+.edit{
+    grid-column-start: 3;
+    grid-column-end: 4; 
+    margin-top: 180px;
+    border-radius: 8px;
+    display: none;
+}
+
+.opt{
+    grid-row-start: 2;
+    grid-row-end: 3; 
+    width: 100px; 
+    margin-top: 30px;
+    border-radius: 10px;
+    
+}
+
+.foot{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;
+    padding-top: 100px;
+    border: 1px solid teal;
+}
+.main{
+    grid-column-start:2 ;
+    grid-column-end: 3; 
+    display: grid;
+    grid-template-columns: 350px 250px;
+    grid-template-rows: auto;
+    margin-top: 30px;
+    margin-left: -50px;
+    width: 600px;
+    overflow: hidden;
+    border: 3px solid mediumpurple;
+    
+    
+}
+
+            /* things inside main */
+            .left{
+                grid-column-start: 1;
+                grid-column-end: 2;
+            }
+            .side{
+                grid-column-start: 2;
+                grid-column-end: 3;
+            }
+  
+            
+
+
+.rightSide{
+    float: right;
+    margin-top: 30px;
+    margin-right: 20px;
+    padding: 5px;
+    
+}
+
+a{
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 15px;
+    border-radius: 4px;
+    transition: all 3s cubic-bezier(0.19, 1, 0.22, 1);
+    -moz-transition: all 3s cubic-bezier(0.19, 1, 0.22, 1);
+    -webkit-transition: all 3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+a:hover{
+    background: lightgray;
+}
+
+.side{
+    padding: 5px;
+    padding-top: 20px;
+    text-align: center;
+    border-left: 2px solid teal;
+    
+}
+
+
+
+/* Images */
+#head{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.imgCircle{
+    width: 200px;
+    height: 200px;
+    padding: 15px;
+    border-radius: 50%;
+    border-right: 2px solid mediumpurple;
+    transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
+    -moz-transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
+    -webkit-transition: all 2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.imgCircle:hover{
+    transform: scale(1,1.1);
+}
+/* Images */
+
+article{
+    padding: 5px;
+}
+
+.name{
+    font-size: 18pt;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+
+.contact{
+    font-weight: bolder;
+}
+.language{
+    margin-top: 30px;
+}
+.quote{
+    margin-top: 100px;
+}
+
+/* Progress Bars */
+progress{
+    height: 15px;
+    width: 80%;
+    color: mediumpurple;
+    background: none;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+progress::-webkit-progress-bar{
+    background: none;
+}
+progress::-webkit-progress-value{
+    background: mediumpurple;
+    border-radius: 8px;
+}
+progress::-moz-progress-bar{
+    background: none;
+}
+/* Progress Bars */
+
+
+
+
+label{
+    padding: 5px;
+    /* border: 1px solid black; */
+    background: mediumpurple;
+    border-radius: 5px;
+}
+
+h3{
+    background: teal;
+    width: 180px;
+    padding: 5px;
+    border-radius: 10px;
+}
+h5{
+    font-family: Arial, Helvetica, sans-serif ;
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 10pt;
+    padding: 5px;
+    border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom: 4px solid mediumpurple;
+    width: fit-content;
+    transition: all 4s cubic-bezier(0.19, 1, 0.22, 1);
+    -moz-transition: all 4s cubic-bezier(0.19, 1, 0.22, 1);
+    -webkit-transition: all 4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+h5:hover{
+    background: mediumpurple;
+    
+}
+span{
+    font-style: italic;
+    font-size: smaller;
+    font-weight: lighter;
+}
+
+p{
+    white-space: pre-line;
+}
+
+#prof{
+    white-space: normal;
+}
+
