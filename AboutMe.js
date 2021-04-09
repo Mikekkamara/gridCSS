@@ -1,5 +1,5 @@
 
-function  hey(){
+/* function  hey(){
 
     var obj = new Date();
     var hrs= obj.getHours();
@@ -17,4 +17,4 @@ function  hey(){
     document.getElementById("date").innerHTML= hrs+":"+mins+":"+sec;
     
 }
-setInterval(hey, 1000);
+setInterval(hey, 1000); */
