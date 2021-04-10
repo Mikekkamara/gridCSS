@@ -3,85 +3,10 @@
   font-size: 1em;
   margin: 0;
   padding: 0;
+  z-index: 9;
 }
 /* #################BACKGROUND############################# */
-.sweet {
-  height: 500px;
-  width: 500px;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0.3;
-  margin: auto;
-  
-  /* marging auto sets the element to the middle of the page */
-}
 
-.mid {
-  position: absolute;
-  height: 250px;
-  width: 150px;
-  background-color: #000000;
-  border-radius: 180px;
-  margin: 175px;
-  margin-top: 125px;
-  animation: mid 5s cubic-bezier(0.5, 0, 1, 0.5) 0s infinite alternate;
-}
-/* mid is the oval thingy in the middle changes color from 
-    */
-
-.move {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  border: none;
-  border-radius: 50px;
-  transform: translate(400px, 200px);
-  transition: all 1s cubic-bezier(1, 0, 0, 1);
-  background-color: crimson;
-  animation: move 5s cubic-bezier(0.5, 0, 1, 0.5) 0s infinite alternate;
-} /* move is the moving circle in the middle */
-
-@keyframes move {
-  0% {
-    transform: translate(400px, 200px);
-  }
-  25% {
-    transform: translate(200px, 200px);
-    background-color: yellow;
-  }
-  50% {
-    transform: translate(0px, 200px);
-    background-color: crimson;
-  }
-  75% {
-    transform: translate(200px, 200px);
-    background-color: cornflowerblue;
-  }
-  100% {
-    transform: translate(400px, 200px);
-  }
-}
-
-@keyframes mid {
-  0% {
-    background-color: black;
-  }
-  25% {
-    background-color: yellow;
-  }
-  50% {
-    background-color: darkolivegreen;
-  }
-  75% {
-    background-color: cornflowerblue;
-  }
-  100% {
-    background-color: black;
-  }
-}
 /* #################BACKGROUND############################# */
 /* ######################PAGE HEADER######################## */
 .top {
@@ -106,7 +31,8 @@
 .rightSide {
   /* border: 1px solid red; */
   height: 50px;
-  width: fit-content;
+  width: 100%;
+  text-align: right;
   margin: auto;
   font-size: 1em;
   padding-top: 15px;
@@ -210,6 +136,7 @@
   width: 90%;
   margin: 10px auto;
   min-height: 37vh;
+  overflow: hidden;
 }
 
 .imgCircle img {
@@ -316,6 +243,7 @@ footer {
   /* border: 2px solid red; */
   margin-top: 200px;
   background: linear-gradient(transparent, rgb(0, 0, 0));
+  z-index: 9;
 }
 
 footer span {
@@ -404,3 +332,195 @@ button {
 }
 
 /* #################FORM#################### */
+
+/* ##############MEDIA QUERIES########################## */
+@media screen and (min-width: 640px) {
+  .main {
+    display: grid;
+    min-width: fit-content;
+    min-height: fit-content;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.55fr 0.4fr 0.5fr;
+    /* border: 1px solid red; */
+    padding: 20px;
+  }
+  .profile {
+    padding: 10px;
+    border-bottom-left-radius: 0;
+    width: 100%;
+    grid-row: 2/3;
+    grid-column: 1 / span 2;
+    border: none;
+    border-left: 3px solid teal;
+  }
+
+  .education {
+    border-bottom-right-radius: 0;
+    grid-row: 1/3;
+    grid-column: 3/4;
+    height: 98%;
+    margin-right: 0;
+    border: none;
+    border-top: 3px solid mediumpurple;
+    border-left: 3px solid teal;
+  }
+  .exp {
+    border-bottom-left-radius: 0;
+  }
+  .quote {
+    grid-column: 2/4;
+    grid-row: 3/4;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    width: 90%;
+    margin-right: 0;
+    border: none;
+    border: 3px solid black;
+  }
+  .contact {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    border-bottom-right-radius: 0;
+    width: 100%;
+  
+    border: none;
+    border-top: 3px solid mediumpurple;
+    border-right: 3px solid mediumpurple;
+  }
+
+  .contact p{
+    margin: 20px;
+  }
+  .language {
+    grid-column: 3/4;
+    grid-row: 4/5;
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: 0;
+    border: none;
+    border-bottom: 3px solid black;
+    border-left: 3px solid teal;
+  }
+  .imgCircle {
+    width: 100%;
+    text-align: center;
+    grid-row: 1/2;
+    grid-column: 1/ 3;
+    border: 3px solid mediumpurple;
+  }
+  .imgCircle img {
+    border: none;
+    border-left: 4px solid teal;
+    width: 150px;
+    box-sizing: border-box;
+  }
+  .achieve {
+    grid-row: 4/5;
+    grid-column: 1/2;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-bottom: 3px solid black;
+    border-right: 3px solid teal;
+  }
+  .exp {
+    grid-row: 4/5;
+    grid-column: 2/3;
+    height: 100%;
+    border: none;
+    border: 3px solid black;
+  }
+
+  .profile,
+  .education,
+  .exp,
+  .achieve,
+  .imgCircle,
+  .contact,
+  .language,
+  .quote {
+    box-sizing: border-box;
+    /* border: 2px solid blue; */
+    margin-top: 10px;
+  }
+
+  .profile,
+  .education,
+  .exp,
+  .achieve {
+    /* border-right: 3px solid teal; */
+    border-radius: none;
+  }
+
+  .language p {
+    width: 100%;
+    margin: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 0.6fr 0.5fr;
+  }
+  .profile,
+  .language,
+  .achieve,
+  .quote,
+  .exp,
+  .imgCircle,
+  .contact,
+  .education {
+    /* border: 1px solid red; */
+    height: auto;
+    width: auto;
+    margin: 0;
+    margin: 5px;
+  }
+
+  .profile {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .education {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    border-top: none;
+  }
+  .quote{
+    grid-column: 1/3;
+    grid-row: 2/3;
+    font-size: 1.3em;
+  }
+  .exp {
+    grid-row: 3/4;
+    grid-column: 2/3;
+    
+  }
+  .achieve {
+    grid-row: 3/4 ;
+    grid-column: 1/2;
+  }
+  .language {
+    grid-row: 2/3;
+    grid-column: 3/4;
+    border-bottom: none;
+  }
+  .imgCircle {
+    padding-top: 50px;
+    grid-row: 1/2;
+    grid-column: 2/3;
+    border: 3px solid black;
+  }
+  .contact{
+    grid-row: 3/4;
+    grid-column: 3/4;
+    border: none;
+    border-left: 3px solid teal;
+  }
+  
+
+}
+
+/* ##############MEDIA QUERIES########################## */

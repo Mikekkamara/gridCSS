@@ -1,0 +1,161 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+/* I used the borders I commented out as guide lines,you know, to see box sizes
+ centering stuff is hard smh */
+.container {
+  /* border: 3px solid red; */
+  min-height: 100vh;
+  position: relative;
+  position: fixed;
+  border: none;
+  z-index: 1;
+  opacity: 0.5;
+}
+/* ####################CENTRE PIECE################################# */
+.oval {
+  /* border: 2px solid blue; */
+  border-radius: 80px;
+  width: 30%;
+  height: 30%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: oval 5s cubic-bezier(0.5, 0, 1, 0.5) infinite alternate-reverse;
+  z-index: 10;
+  /* opacity: 0.9; */
+  /* display: none; */
+}
+/* ####################CENTRE PIECE################################# */
+
+/* ######################MOVING CIRCLE############################### */
+
+.circle {
+  /* border: 1px solid green; */
+  width: 10%;
+  /* Remember to change this to 5% - for small screens then use media queries for larger screens */
+  height: 5%;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  /* left: 0; */
+  right: 0;
+  margin: auto;
+
+  animation: move 5s cubic-bezier(0.5, 0, 1, 0.5) 0s infinite alternate-reverse;
+}
+/* ######################MOVING CIRCLE############################### */
+
+/* ##################ANIMATIONS################################# */
+@keyframes move {
+  0% {
+    transform: translate(-840%, 0);
+    background: teal;
+  }
+  50% {
+    transform: translate(-420%, 0);
+    background: grey;
+  }
+  100% {
+    transform: translate(0, 0);
+    background: cornflowerblue;
+  }
+}
+@keyframes oval {
+  0% {
+    background: teal;
+  }
+  25% {
+    background: linear-gradient(to right yellow, grey);
+  }
+  50% {
+    background: grey;
+  }
+  75% {
+    background: linear-gradient(to left grey, cornflowerblue);
+  }
+  100% {
+    background-color: cornflowerblue;
+  }
+}
+/* ##################ANIMATIONS################################# */
+
+/* #######################MEDIA QUERIES */
+@media screen and (max-width: 2600px) {
+  .oval {
+    height: 70%;
+    width: 20%;
+    border-radius: 2100px;
+  }
+  .circle {
+    height: 25%;
+  }
+}
+@media screen and (max-width: 2200px) {
+  .oval {
+    height: 70%;
+    width: 20%;
+    border-radius: 2100px;
+  }
+  .circle {
+    height: 22%;
+  }
+}
+@media screen and (max-width: 1800px) {
+  .oval {
+    height: 70%;
+    width: 20%;
+    border-radius: 2100px;
+  }
+  .circle {
+    height: 18%;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .oval {
+    height: 70%;
+    width: 20%;
+    border-radius: 2100px;
+  }
+  .circle {
+    height: 18%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .oval {
+    height: 50%;
+    width: 20%;
+    border-radius: 250px;
+  }
+  .circle {
+    height: 17%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .oval {
+    height: 50%;
+    width: 25%;
+    border-radius: 300px;
+  }
+  .circle {
+    height: 10%;
+  }
+}
+@media screen and (max-width: 520px) {
+  .oval {
+    height: 30%;
+    width: 30%;
+  }
+  .circle {
+    height: 6%;
+  }
+}
+
+/* That was  4hours on media queries damn */
+/* #######################MEDIA QUERIES */
